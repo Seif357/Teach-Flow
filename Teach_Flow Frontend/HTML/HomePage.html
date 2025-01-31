@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeachFlow</title>
+    <link rel="icon" href="Screenshot_2024-10-13_171118-removebg-preview.png" />
+    <link rel="stylesheet" href="../CSS/HomePage.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <button id="toggleBtn" class="toggle-btn">☰</button>
+      <div class="TeachFlow">
+        <a href="../HTML/HomePage.html">
+          <img
+            src=""
+            alt="TeachFlow text"
+            id="TeachFlow text"
+            class="google-header-text"
+          />
+        </a>
+      </div>
+      <div class="profile-section">
+        <img src="" alt="Profile Picture" class="accpfp" id="profilePicture" />
+
+        <div id="profileDropdown" class="dropdown-content">
+          <a href="../HTML/EditProfile.html" id="editProfileLink">
+            <button id="editProfileBtn">Edit Profile</button>
+          </a>
+          <button id="signOutBtn">Sign Out</button>
+        </div>
+      </div>
+      <div class="plus-section">
+        <svg
+          class="plus-icon"
+          focusable="false"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+        </svg>
+
+        <svg
+          class="plus-icon invert-colors"
+          focusable="false"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2v20m10-10H2"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+
+        <div id="plus-iconDropdown" class="dropdown-plus-icon">
+          <button id="joinClassBtn">Join Class</button>
+          <button id="createClassBtn">Create Class</button>
+        </div>
+
+        <!-- Join Class Modal -->
+        <div id="joinClassModal" class="new-modal">
+          <div class="new-modal-content">
+            <span class="new-close" id="closeJoinClass">&times;</span>
+            <h2>Join Class</h2>
+            <label for="classCode">Enter Class Code:</label>
+            <input
+              type="text"
+              id="classCode"
+              class="join-class-input"
+              name="classCode"
+              required
+            />
+            <button type="submit" class="join-btn">Join</button>
+          </div>
+        </div>
+
+        <!-- Create Class Modal -->
+        <div id="createClassModal" class="new-modal">
+          <div class="new-modal-content">
+            <span class="new-close" id="closeCreateClass">&times;</span>
+             <h2>Create Class</h2>
+             <div class="form-container">
+                <div class="form-row">
+                  <label for="className">Class Name:</label>
+                  <input type="text" id="className" class="create-class-input" name="className" required>
+                </div>
+                <div class="form-row">
+                  <label for="classDescription">Class Description:</label>
+                  <input type="text" id="classDescription" class="create-class-input" name="classDescription" required>
+                </div>
+              </div>
+                 <button class="create-btn">Create</button>
+          </div>
+        </div>
+      </div>
+      <div class="toggle-container">
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+          Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <a href="../HTML/HomePage.html" class="sidebar-link">
+        <div class="sidebar-header">
+          <span class="icon">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="NMm5M"
+            >
+              <path
+                d="M12 3L4 9v12h16V9l-8-6zm6 16h-3v-6H9v6H6v-9l6-4.5 6 4.5v9z"
+              ></path>
+            </svg>
+          </span>
+          <span class="text">Home</span>
+        </div>
+      </a>
+      <hr class="separator" />
+      <div class="sidebar-header-teacher">
+        <span class="icon">
+          <span class="collapsable-icon">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="NMm5M hhikbc"
+            >
+              <path d="M10 17l5-5-5-5v10z"></path>
+            </svg>
+          </span>
+          <span class="other-icon">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="NMm5M svg-icon"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="17" cy="12.5" r="2.5" class="svg-circle"></circle>
+              <path
+                d="M17 15.62c-1.67 0-5 .84-5 2.5V20h10v-1.88c0-1.66-3.33-2.5-5-2.5zM10 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm1.82 9.17c.01 0 0 0 0 0zM10 13c-2.67 0-8 1.34-8 4v3h8v-2H4v-.99c.2-.72 3.3-2.01 6-2.01.6 0 1.22.07 1.82.17h.01l2.07-1.55c-1.39-.41-2.85-.62-3.9-.62z"
+                class="svg-path"
+              ></path>
+            </svg>
+          </span>
+        </span>
+        <span class="text">Teaching</span>
+      </div>
+      <div class="submenu-teacher"></div>
+      <hr class="separator" />
+      <div class="sidebar-header-enrolled">
+        <span class="icon">
+          <span class="collapsable-icon">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="NMm5M hhikbc"
+            >
+              <path d="M10 17l5-5-5-5v10z"></path>
+            </svg>
+          </span>
+          <span class="other-icon">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="NMm5M"
+            >
+              <path
+                d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"
+              ></path>
+            </svg>
+          </span>
+        </span>
+        <span class="text">Enrolled</span>
+      </div>
+      <!-- Moved the submenu out of the header -->
+      <div class="submenu-enrolled"></div>
+    </div>
+    <div class="grid-container" id="gridContainer"></div>
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h2>Welcome to TeachFlow</h2>
+        <p>Please log in to continue.</p>
+        <button id="loginBtn" class="login-btn">Login</button>
+        <p>
+          Don't have an account?
+          <button id="registerBtn" class="register-btn">Register</button>
+        </p>
+      </div>
+    </div>
+
+    <script src="../JS/HomePage.js"></script>
+    <script src="../JS/darkmodes.js"></script>
+  </body>
+</html>
