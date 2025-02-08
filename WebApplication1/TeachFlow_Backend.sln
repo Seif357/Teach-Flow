@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{507CF602-7D1D-43AC-90DF-2D2EAF9B4360}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeachFlow_API", "TeachFlow_API\TeachFlow_API.csproj", "{507CF602-7D1D-43AC-90DF-2D2EAF9B4360}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

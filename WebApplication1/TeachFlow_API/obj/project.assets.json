@@ -2641,11 +2641,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\Projects\\Teach_Flow\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "D:\\Programming\\Projects\\Teach_Flow\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\Programming\\Projects\\Teach_Flow\\WebApplication1\\TeachFlow_API\\TeachFlow_API.csproj",
+      "projectName": "TeachFlow_API",
+      "projectPath": "D:\\Programming\\Projects\\Teach_Flow\\WebApplication1\\TeachFlow_API\\TeachFlow_API.csproj",
       "packagesPath": "C:\\Users\\Seif\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\Projects\\Teach_Flow\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "D:\\Programming\\Projects\\Teach_Flow\\WebApplication1\\TeachFlow_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
