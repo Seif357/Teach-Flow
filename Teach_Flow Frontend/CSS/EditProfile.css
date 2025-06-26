@@ -1,0 +1,312 @@
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Logo Styling */
+.logo {
+    margin-top: -29px;
+    width: 200px;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Hidden class for fade-out effect */
+.hidden {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Form Styles */
+.editProfileForm {
+    width: 100%;
+}
+
+h2 {
+    margin-top: -2px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    transition: color 0.5s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+
+}
+button {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    background-color: #2b75f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #195bb5;
+}
+.save-btn{
+    margin-top: 0px;
+}
+.back-btn { 
+    background-color: white; /* Circle background color */
+    color: black; /* Arrow color */
+    padding: 10px; /* Adjust padding for circle */
+    border: none;
+    border-radius: 50%; /* Make it a circle */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline-block;
+    width: 40px; /* Circle size */
+    height: 40px; /* Circle size */
+    text-align: center;
+    font-size: 18px; /* Adjust arrow size */
+    transition: background-color 0.5s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: lightgray; /* Color on hover */
+}
+.backimg {
+    max-width: 80%;           /* Make the image larger without exceeding the container */
+    max-height: 80%;          /* Keep the image proportional */
+    border-radius: 50%;        /* Rounded image */
+    border: 4px solid transparent;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    object-fit: cover;         /* Ensures the image fits nicely */
+    position: absolute;        /* Keeps the image centered */
+    top: 4px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+}
+
+.back:hover .backimg {
+    transform: scale(1.1) translateX(-5px); /* Slightly smaller and shifted left */
+}
+
+/* Profile Picture Section Styling */
+#profilePicture {
+    display: none;
+}
+
+.profile-container {
+    display: flex;
+    margin-top: -27px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;       /* Smooth edges for a modern look */
+
+}
+
+#profileImage {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    margin-right: 17px;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    cursor: pointer; /* Change pointer when hovering */
+}
+#profileImage:hover + .hover-message {
+    display: block; /* Show message when the image itself is hovered */
+}
+
+.hover-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+}
+.profile-picture img:hover {
+    transform: scale(1.05);     /* Slight zoom on hover */
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 19px;            /* Slightly larger for readability */
+    color: #222;
+    font-weight: 600;           /* Bold title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    transition: color 0.5s ease-in-out;
+}
+#cropModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 500px;        /* Keep the natural width if smaller */
+    max-height: 500px;
+    width: auto;        /* Keep the natural width if smaller */
+    height: auto; 
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#imagePreview {
+    max-width: auto;  /* Image will never exceed 500px */
+    max-height: 350px;
+    width: auto;        /* Keep the natural width if smaller */
+    height: auto; 
+}
+.profile-info p {
+    margin: 5px 0;
+    font-size: 15px;            /* Increase font size for readability */
+    color: #222;
+    line-height: 1.5;           /* Better line spacing */
+    transition: color 0.5s ease-in-out;
+}
+
+.profile-info a {
+    color: #007BFF;             /* Link color to match theme */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.profile-info a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+/* Dark Mode Button */
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+} 
+.dark-mode-btn {
+    padding: 10px 20px;
+    background-color: #195bb5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.dark-mode-btn:hover {
+    background-color: #123d82;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+}
+
+.container.dark-mode {
+    background-color: #444;
+}
+
+h2.dark-mode{
+    color: white;
+}
+
+input.dark-mode {
+    background-color: #555;
+    color: white;
+    border-color: #666;
+}
+
+button.dark-mode {
+    background-color: #195bb5;
+}
+
+button.dark-mode:hover {
+    background-color: #123d82;
+}
+
+/* Logo Dark Mode Styling */
+.logo.dark-mode {
+    filter: brightness(0.8);
+    transform: scale(1.1);
+}
+/* Profile Info Dark Mode */
+.profile-info h3.dark-mode, 
+.profile-info p.dark-mode {
+    color: #ddd; /* Light text for better contrast */
+    text-shadow: none;
+}
+.back-btn.dark-mode {
+    background-color: #555;
+    color: white;
+}
+
+.back-btn.dark-mode:hover {
+    background-color: #666;
+}
+/* Back Image Dark Mode */
+.backimg.dark-mode {
+    border-color: white; /* Change border color for dark mode */
+    filter: brightness(0.9); /* Slight dimming for better integration */
+}
+.modal-text.dark-mode{
+    color: white;
+}
+#cropModal.dark-mode {
+    background-color: #555;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #444;
+    border: 1px solid #555;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}

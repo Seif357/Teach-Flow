@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeachFlow</title>
+    <link rel="stylesheet" href="../CSS/EditProfile.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="toggle-container">
+        <button id="dark-mode-toggle" class="dark-mode-btn">Dark Mode</button>
+      </div>
+      <div class="container">
+        <img src="" id="logo" alt="Logo" class="logo" />
+        <!-- Register Form -->
+        <div class="register-form">
+          <!-- Include Cropper.js CSS -->
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
+            rel="stylesheet"
+          />
+
+          <div class="profile-container">
+            <div class="profile-picture">
+              <img
+                id="profileImage"
+                src="../Images/360_F_587766653_PkBNyGx7mQh9l1XXPtCAq1lBgOsLl6xH.jpg"
+                alt="Profile Image"
+              />
+              <span id="hoverMessage" class="hover-message"
+                >Click to change photo</span
+              >
+              <input
+                type="file"
+                id="profilePicture"
+                name="profilePicture"
+                accept="image/*"
+              />
+            </div>
+            <div class="profile-info">
+              <h3 id="fullName" class="profile-fullName"></h3>
+              <p id="contactInfo" class="profile-contact"></p>
+            </div>
+          </div>
+          <h2>Edit Profile</h2>
+          <form id="editProfileForm">
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <input type="email" id="email" placeholder="E-mail" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit" class="save-btn">Save Changes</button>
+          </form>
+        </div>
+      </div>
+      <a href="HomePage.html" onclick="goBackAndRefresh(event)" class="back-btn"
+        ><img src="" id="backimg" alt="backimg" class="backimg"
+      /></a>
+    </div>
+    <!-- Modal for cropping -->
+    <div id="cropModal" class="modal" style="display: none">
+      <div class="imageDiv">
+        <img id="imagePreview" src="" alt="Image Preview" />
+      </div>
+      <button id="cropButton">Crop and Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+    <script src="../JS/EditProfile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="../JS/darkmodes.js"></script>
+  </body>
+</html>
