@@ -1,4 +1,3 @@
 {
-  "buildCommand": "echo 'No build step required for static HTML'",
-  "outputDirectory": "Teach_Flow Frontend/HTML/"
+  "buildCommand": "echo 'No build step required for static HTML'"
 }
